@@ -109,6 +109,12 @@ export default function ContactPage() {
                       laduncan617@gmail.com
                     </Link>
                   </div>
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-6 w-6 text-gray-600" />
+                    <Link href="mailto:info@lynneduncandesign.online" className="hover:underline">
+                      info@lynneduncandesign.online
+                    </Link>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-semibold mt-10 mb-6">FOLLOW US</h3>
                 <div className="flex gap-6">

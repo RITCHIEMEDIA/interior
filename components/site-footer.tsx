@@ -29,6 +29,13 @@ export default function SiteFooter() {
               <Mail className="h-5 w-5" />
               laduncan617@gmail.com
             </Link>
+            <Link
+              href="mailto:info@lynneduncandesign.online"
+              className="flex items-center gap-2 text-gray-300 hover:underline mt-2"
+            >
+              <Mail className="h-5 w-5" />
+              info@lynneduncandesign.online
+            </Link>
           </div>
 
           {/* social */}
