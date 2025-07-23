@@ -38,30 +38,7 @@ export default function SiteFooter() {
             </Link>
           </div>
 
-          {/* social */}
-          <div className="flex flex-col items-center md:items-end">
-            <h3 className="text-lg font-semibold mb-4">FOLLOW US</h3>
-            <div className="flex gap-4">
-              <Link
-                href="https://www.houzz.com/pro/lynneduncandesign"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <span className="sr-only">Houzz</span>
-                {/* simple H icon */}
-                <span className="font-bold text-3xl">h</span>
-              </Link>
-              <Link
-                href="https://www.instagram.com/lynneduncandesign/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-              {/* Instagram link removed as requested */}
-              </Link>
-            </div>
-          </div>
+          {/* Social links removed as requested */}
         </div>
 
         <div className="border-t border-gray-700 pt-8 text-gray-400 text-sm">

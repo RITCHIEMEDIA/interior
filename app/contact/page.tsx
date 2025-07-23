@@ -116,19 +116,7 @@ export default function ContactPage() {
                     </Link>
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold mt-10 mb-6">FOLLOW US</h3>
-                <div className="flex gap-6">
-                  <Link
-                    href="https://www.houzz.com/pro/lynneduncandesign"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-black"
-                  >
-                    <span className="sr-only">Houzz</span>
-                    <span className="font-bold text-3xl">h</span>
-                  </Link>
-          {/* Instagram link removed as requested */}
-                </div>
+                {/* FOLLOW US and Houzz link removed as requested */}
               </div>
             </div>
           </div>
