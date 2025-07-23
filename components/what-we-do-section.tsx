@@ -10,7 +10,7 @@ export default function WhatWeDoSection() {
           <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 flex flex-col items-center text-center">
             <h2 className="text-5xl font-playfair font-bold tracking-widest uppercase mb-8 text-center">WHAT WE DO</h2>
             <Image
-              src="/images/logo.png"
+              src="/images/Logo.png"
               alt="Lynne Duncan Design Logo"
               width={180}
               height={180}
