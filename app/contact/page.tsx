@@ -127,15 +127,7 @@ export default function ContactPage() {
                     <span className="sr-only">Houzz</span>
                     <span className="font-bold text-3xl">h</span>
                   </Link>
-                  <Link
-                    href="https://www.instagram.com/lynneduncandesign/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-black"
-                  >
-                    <Instagram className="h-8 w-8" />
-                    <span className="sr-only">Instagram</span>
-                  </Link>
+          {/* Instagram link removed as requested */}
                 </div>
               </div>
             </div>

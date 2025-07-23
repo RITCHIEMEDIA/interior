@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Instagram, Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 
 export default function SiteFooter() {
   return (
@@ -58,8 +58,7 @@ export default function SiteFooter() {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
               >
-                <Instagram className="h-6 w-6" />
-                <span className="sr-only">Instagram</span>
+              {/* Instagram link removed as requested */}
               </Link>
             </div>
           </div>
