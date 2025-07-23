@@ -13,7 +13,7 @@ export default function AboutSection() {
           {/* portrait */}
           <div className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4">
             <Image
-              src="/images/timothy.png"
+              src="/images/logo.png"
               width={300}
               height={400}
               alt="Lynne Duncan"
