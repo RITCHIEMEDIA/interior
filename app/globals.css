@@ -1,3 +1,87 @@
+section + section {
+  border-top: 1.5px solid #d1d5db;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+section {
+  background: linear-gradient(120deg, #f8fafc 60%, #f1f5f9 100%);
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+  border-radius: 1.25rem;
+  margin-bottom: 3.5rem;
+  margin-top: 3.5rem;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+section h2, section .section-title {
+  font-family: 'Lora', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+section h2::before, section .section-title::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, #cbd5e1 0%, #64748b 100%);
+  border-radius: 1px;
+  margin-right: 0.5rem;
+}
+
+/* Optional: Use an icon instead of line */
+/* section h2::before { content: '\2022'; font-size: 1.5rem; color: #64748b; margin-right: 0.5rem; } */
+
+/* Scroll to top button styles */
+.scroll-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 50;
+  background: #fff;
+  color: #374151;
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+  padding: 0.75rem 1.25rem;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.scroll-to-top:hover {
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+  transform: translateY(-2px) scale(1.08);
+}
+
+.card, .bg-white, .bg-gray-50, .bg-gray-100 {
+  border-radius: 1rem;
+}
+
+button, .btn, .bg-black, .bg-primary {
+  border-radius: 0.75rem !important;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+}
+
+button:hover, .btn:hover {
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.12);
+  transform: translateY(-2px) scale(1.04);
+}
+
+input, textarea, select {
+  border-radius: 0.5rem !important;
+}
 html {
   scroll-behavior: smooth;
 }

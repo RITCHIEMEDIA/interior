@@ -1,7 +1,11 @@
+ 
+import ScrollToTop from "../components/scroll-to-top";
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
+import SiteFooter from "@/components/site-footer";
+import { use } from "react";
 
 export const metadata: Metadata = {
   title: 'LYNNE DUNCAN DESIGN',
@@ -11,6 +15,7 @@ export const metadata: Metadata = {
     'Interior Design',
     'Home Decor',
     'Luxury Interiors',
+
     'Bespoke Design',
     'Residential Design',
     'Commercial Interiors',
@@ -95,41 +100,32 @@ export default function RootLayout({
             --font-mono: ${GeistMono.variable};
           }
         `}</style>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "LYNNE DUNCAN DESIGN",
-          "url": "https://lynneduncandesign.online",
-          "logo": "https://lynneduncandesign.online/images/Logo.png",
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "email": "laduncan617@gmail.com",
-              "contactType": "customer service"
-            },
-            {
-              "@type": "ContactPoint",
-              "email": "info@lynneduncandesign.online",
-              "contactType": "customer service"
-            }
-          ],
-          "sameAs": [
-            "https://www.instagram.com/lynneduncandesign"
-          ]
-        }) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "url": "https://lynneduncandesign.online",
-          "name": "LYNNE DUNCAN DESIGN",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://lynneduncandesign.online/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        }) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "LYNNE DUNCAN DESIGN",
+              "url": "https://lynneduncandesign.online",
+              "logo": "https://lynneduncandesign.online/images/Logo.png",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-419-262-1840",
+                  "contactType": "customer service",
+                  "email": "info@lynneduncandesign.online"
+                }
+              ]
+            })
+          }}
+        />
       </head>
-      <body>{children}</body>
-    </html>
-  )
-}
+      <body>
+        {children}
+        <SiteFooter />
+        <ScrollToTop />
+      </body>
+      </html>
+    );
+  }
