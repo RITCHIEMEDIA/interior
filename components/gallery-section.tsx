@@ -29,7 +29,7 @@ export default function GallerySection() {
     <section id="gallery" className="py-16 md:py-24 bg-white text-gray-800">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col items-center text-center mb-12">
-          <h2 className="text-4xl font-playfair font-bold tracking-widest uppercase mb-4">MY WORK</h2>
+          {/* MY WORK heading removed as requested */}
           <div className="w-24 h-px bg-gray-300" />
         </div>
 

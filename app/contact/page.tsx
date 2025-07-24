@@ -1,3 +1,4 @@
+"use client"
 import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
 import HeroImageSection from "@/components/hero-image-section"
@@ -5,9 +6,20 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Mail, MapPin, Phone, Instagram } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
+import { useRef, useState } from "react"
 
 export default function ContactPage() {
+  const [showModal, setShowModal] = useState(false)
+  const formRef = useRef<HTMLFormElement>(null)
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setShowModal(true)
+    if (formRef.current) {
+      formRef.current.reset()
+    }
+    setTimeout(() => setShowModal(false), 3000)
+  }
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-800">
       <SiteHeader />
@@ -31,7 +43,7 @@ export default function ContactPage() {
                 <p className="text-gray-700 mb-6 text-center md:text-left">
                   Want to learn more? Contact us about your next project!
                 </p>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit} ref={formRef}>
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Name (required)
@@ -86,6 +98,21 @@ export default function ContactPage() {
                   <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800 py-3 text-lg">
                     Submit
                   </Button>
+                  {showModal && (
+                    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/60 backdrop-blur-sm transition-all">
+                      <div className="bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl shadow-2xl px-10 py-12 max-w-xs w-full border border-gray-300 animate-fade-in-up">
+                        <div className="flex flex-col items-center">
+                          <svg className="mb-4 h-12 w-12 text-green-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="white" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12l2 2l4-4" />
+                          </svg>
+                          <h4 className="text-2xl font-bold mb-2 text-green-700">Submitted!</h4>
+                          <p className="text-gray-700 mb-2">Your message has been sent successfully.</p>
+                          <span className="text-xs text-gray-400">Thank you for reaching out!</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </form>
               </div>
 

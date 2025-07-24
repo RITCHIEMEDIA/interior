@@ -57,7 +57,7 @@ export default function SiteHeader() {
             LYNNE DUNCAN DESIGN
           </span>
           {!scrolled && (
-            <span className="text-xs tracking-[0.25em] md:text-sm md:tracking-[0.3em] uppercase mt-2">
+            <span className="text-xs tracking-[0.005em] md:text-sm md:tracking-[0.0001em] uppercase mt-2">
               giving you the home of your dreams
             </span>
           )}

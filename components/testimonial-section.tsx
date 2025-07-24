@@ -5,8 +5,12 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect, useCallback } from "react"
 
-export default function TestimonialSection() {
-  const testimonials = [
+interface TestimonialSectionProps {
+  maxCount?: number;
+}
+
+export default function TestimonialSection({ maxCount }: TestimonialSectionProps) {
+  let testimonials = [
     {
       quote:
         "Lynne is one of the finest designers I’ve worked with. Her skills in matching design concepts with your existing tastes make her a delight to work with. Her will inspire you to look beyond common trends and listen and care about how you feel. I admire Lynne's dedication to her clients and their projects as well as her integrity throughout the entire process. I highly recommend Lynne Duncan.",
@@ -32,6 +36,9 @@ export default function TestimonialSection() {
       rating: 5,
     },
   ]
+  if (typeof maxCount === 'number') {
+    testimonials = testimonials.slice(0, maxCount)
+  }
 
   const [currentIndex, setCurrentIndex] = useState(0)
 

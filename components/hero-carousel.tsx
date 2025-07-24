@@ -71,7 +71,7 @@ export default function HeroCarousel() {
         <h1 className="text-white text-3xl md:text-5xl font-playfair font-bold drop-shadow-lg text-center mb-2 tracking-wide">
           {images[currentIndex].heading}
         </h1>
-        <p className="text-white text-lg md:text-2xl font-lora drop-shadow-md text-center max-w-2xl">
+        <p className="text-white text-base md:text-lg font-lora drop-shadow-md text-center max-w-2xl">
           {images[currentIndex].subtext}
         </p>
       </div>
