@@ -24,7 +24,7 @@ export default function AboutUsPage() {
         <TestimonialSection />
         {/* AwardsSection removed as requested */}
       </main>
-      <SiteFooter />
+      {/* <SiteFooter /> */}
     </div>
   )
 }

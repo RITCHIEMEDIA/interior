@@ -19,7 +19,6 @@ const gallery = [
   { src: "/images/hww1.png", alt: "Design Process 1" },
   { src: "/images/hww2.png", alt: "Design Process 2" },
   { src: "/images/hww3.png", alt: "Design Process 3" },
-  { src: "/images/hww4.png", alt: "Design Process 4" },
 ]
 
 export default function GallerySection() {

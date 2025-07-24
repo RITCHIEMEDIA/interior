@@ -21,7 +21,7 @@ export default function TestimonialsPage() {
         <TestimonialsList />
         <CallToActionSection />
       </main>
-      <SiteFooter />
+      {/* <SiteFooter /> */}
     </div>
   )
 }
