@@ -46,28 +46,35 @@ export default function HowWeWorkProcess() {
           <h2 className="text-4xl font-serif tracking-widest uppercase mb-4">HOW WE WORK</h2>
           <div className="w-24 h-px bg-gray-300" />
         </div>
-        <div className="grid grid-cols-1 gap-12">
-          {processSteps.map((step, index) => (
-            <div
-              key={index}
-              className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
-            >
-              <div className="w-full md:w-1/2">
-                <Image
-                  src={step.image || "/placeholder.svg"}
-                  alt={step.alt}
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="w-full md:w-1/2 text-center md:text-left">
-                <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+           <ol className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+             {processSteps.map((step, index) => (
+               <li
+                 key={index}
+                 className={
+                   `relative bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-xl shadow-lg p-8 flex flex-col items-center md:items-start transition-transform duration-300 hover:scale-[1.025] border-l-4 ${
+                     [
+                       'border-blue-400',
+                       'border-green-400',
+                       'border-yellow-400',
+                       'border-pink-400',
+                     ][index % 4]
+                   }`
+                 }
+               >
+                 <div className="flex items-center mb-4">
+                   <span className="flex items-center justify-center h-10 w-10 rounded-full bg-black text-white font-bold text-lg mr-4 shadow-md">
+                     {index + 1}
+                   </span>
+                   <h3 className="text-xl md:text-2xl font-playfair font-bold tracking-wide uppercase text-gray-900">
+                     {step.title}
+                   </h3>
+                 </div>
+                 <p className="text-gray-700 font-lora text-base md:text-lg leading-relaxed text-center md:text-left">
+                   {step.description}
+                 </p>
+               </li>
+             ))}
+           </ol>
       </div>
     </section>
   )
