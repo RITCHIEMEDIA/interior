@@ -20,7 +20,7 @@ export default function GalleryPage() {
         </section>
         <GallerySection />
       </main>
-      <SiteFooter />
+      {/* <SiteFooter /> */}
     </div>
   )
 }

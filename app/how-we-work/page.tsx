@@ -11,7 +11,7 @@ export default function HowWeWorkPage() {
         {/* Add padding-top to account for fixed header */}
         <HowWeWorkProcess />
       </main>
-      <SiteFooter />
+      {/* <SiteFooter /> */}
     </div>
   )
 }
